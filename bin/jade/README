@@ -94,9 +94,9 @@ see the Administrator's guide for the list of
 options available from the command line
 
 
-5.3.2 Launching agents from the command line
+5.3.2 Launching sma.agents from the command line
 ============================================
-A list of agents can be launched directly from the command line. As described
+A list of sma.agents can be launched directly from the command line. As described
 above, the [Agent list] part of the command is a sequence of strings separated
 by a space.
 Each string is broken in two parts separated by a colon ':' character. The 
@@ -122,14 +122,14 @@ prompt> java jade.Boot -gui
 Execute the following command to start an agent container on another machine,
 by telling it to join the AgentPlatform, called "facts" running on the host 
 "kim.cselt.it", and start one agent (you must download and compile the 
-examples agents to do that): 
+examples sma.agents to do that):
 prompt> java jade.Boot -host kim.cselt.it -container
           sender1:examples.receivers.AgentSender 
 where "sender1" is the name of the agent,  
 while examples.receivers.AgentSender is the code that implements the agent.
 Execute the following command on a third machine to start another agent 
 container telling it to join the Agent Platform, called "facts" running on 
-the host "kim.cselt.it", and then start two agents. 
+the host "kim.cselt.it", and then start two sma.agents.
 prompt> java jade.Boot -host kim.cselt.it -container 
           receiver2:examples.receivers.AgentReceiver 
           sender2:examples.receivers.AgentSender
@@ -228,8 +228,8 @@ and in a ASCII file named JADE.IOR, located in the current directory; the
 URL for the platform (containing a binary string in the file part) is also 
 written to the file JADE.URL in the current directory. Every agent address 
 automatically includes this platform IOR that should be distributed to remote 
-platforms in order to allow remote agents to send messages to your JADE 
-agents. The distribution mechanism is not specified by FIPA and is 
+platforms in order to allow remote sma.agents to send messages to your JADE
+sma.agents. The distribution mechanism is not specified by FIPA and is
 application dependent. 
 
 
